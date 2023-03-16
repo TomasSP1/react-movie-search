@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import OneProduct from "./OneProduct";
 import SearchProduct from "./SearchProduct";
 
+import './main.css'
+
 const Main = () => {
     const [productsFromApi, setProductsFromApi] = useState([]);
 

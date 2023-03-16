@@ -1,14 +1,23 @@
 import React from 'react'
 
+import './oneProduct.css'
+
 const OneProduct = (props) => {
     console.log(props)
-    const items = props.productsFromApi.products
+    console.log(props.productsFromApi)
+    const items = props.productsFromApi.Search
+    console.log(items)
   return (
-    <div>
+    <div className='productList'>
         {
             items?.map(item => (
-                <div key={item.id}>
-                    <h2>{item.title}</h2>
+                <div key={item.imdbID
+                } className='oneProduct'>
+                    <h2>{item.Title}</h2>
+                    <h3>{item.Genre}</h3>
+                    <p>{item.Plot}</p>
+                    <img src={item.Poster} alt={item.Title} />
+                    <p>{item.Released}</p>
                 </div>
             ))
         }
